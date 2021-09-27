@@ -1,3 +1,4 @@
+[Discussion Post (created on 27/8/2021 at 11:45)](https://leetcode.com/problems/next-greater-element-ii/discuss/1488632/Short-and-Easy-!)  
 <h2>503. Next Greater Element II</h2><h3>Medium</h3><hr><div><p>Given a circular integer array <code>nums</code> (i.e., the next element of <code>nums[nums.length - 1]</code> is <code>nums[0]</code>), return <em>the <strong>next greater number</strong> for every element in</em> <code>nums</code>.</p>
 
 <p>The <strong>next greater number</strong> of a number <code>x</code> is the first greater number to its traversing-order next in the array, which means you could search circularly to find its next greater number. If it doesn't exist, return <code>-1</code> for this number.</p>
