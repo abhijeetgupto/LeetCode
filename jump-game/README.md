@@ -1,3 +1,4 @@
+[Discussion Post (created on 3/9/2021 at 15:28)](https://leetcode.com/problems/jump-game/discuss/1500819/Easy-DP-solution-!)  
 <h2>55. Jump Game</h2><h3>Medium</h3><hr><div><p>You are given an integer array <code>nums</code>. You are initially positioned at the array's <strong>first index</strong>, and each element in the array represents your maximum jump length at that position.</p>
 
 <p>Return <code>true</code><em> if you can reach the last index, or </em><code>false</code><em> otherwise</em>.</p>
