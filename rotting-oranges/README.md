@@ -1,3 +1,4 @@
+[Discussion Post (created on 9/9/2021 at 1:45)](https://leetcode.com/problems/rotting-oranges/discuss/1511148/Logic-!)  
 <h2>994. Rotting Oranges</h2><h3>Medium</h3><hr><div><p>You are given an <code>m x n</code> <code>grid</code> where each cell can have one of three values:</p>
 
 <ul>
