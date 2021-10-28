@@ -1,3 +1,4 @@
+[Discussion Post (created on 28/9/2021 at 15:12)](https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree/discuss/1545236/Simple-python-solution)  
 <h2>1261. Find Elements in a Contaminated Binary Tree</h2><h3>Medium</h3><hr><div><p>Given a binary tree with the following rules:</p>
 
 <ol>
