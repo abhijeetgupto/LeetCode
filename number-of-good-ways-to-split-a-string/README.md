@@ -1,3 +1,4 @@
+[Discussion Post (created on 28/9/2021 at 15:48)](https://leetcode.com/problems/number-of-good-ways-to-split-a-string/discuss/1545273/Faster-than-95-oror-kind-of-sliding-window-using-python-dictionary)  
 <h2>1525. Number of Good Ways to Split a String</h2><h3>Medium</h3><hr><div><p>You are given a string <code>s</code>, a&nbsp;split is called <em>good</em>&nbsp;if you can split&nbsp;<code>s</code> into 2&nbsp;non-empty strings <code>p</code> and <code>q</code> where its concatenation is equal to <code>s</code> and the number of distinct letters in <code>p</code> and <code>q</code> are the same.</p>
 
 <p>Return the number of <em>good</em> splits you can make in <code>s</code>.</p>
