@@ -1,3 +1,4 @@
+[Discussion Post (created on 30/9/2021 at 17:38)](https://leetcode.com/problems/jump-game-ii/discuss/1548707/Easy-python-soultion-using-dp)  
 <h2>45. Jump Game II</h2><h3>Medium</h3><hr><div><p>Given an array of non-negative integers <code>nums</code>, you are initially positioned at the first index of the array.</p>
 
 <p>Each element in the array represents your maximum jump length at that position.</p>
