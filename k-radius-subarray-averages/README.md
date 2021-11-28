@@ -1,3 +1,4 @@
+[Discussion Post (created on 28/10/2021 at 19:6)](https://leetcode.com/problems/k-radius-subarray-averages/discuss/1600926/Faster-than-100-oror-Python-oror-Sliding-Window)  
 <h2>2090. K Radius Subarray Averages</h2><h3>Medium</h3><hr><div><p>You are given a <strong>0-indexed</strong> array <code>nums</code> of <code>n</code> integers, and an integer <code>k</code>.</p>
 
 <p>The <strong>k-radius average</strong> for a subarray of <code>nums</code> <strong>centered</strong> at some index <code>i</code> with the <strong>radius</strong> <code>k</code> is the average of <strong>all</strong> elements in <code>nums</code> between the indices <code>i - k</code> and <code>i + k</code> (<strong>inclusive</strong>). If there are less than <code>k</code> elements before <strong>or</strong> after the index <code>i</code>, then the <strong>k-radius average</strong> is <code>-1</code>.</p>
