@@ -1,3 +1,4 @@
+[Discussion Post (created on 6/11/2021 at 22:23)](https://leetcode.com/problems/longest-happy-prefix/discuss/1615098/Bruteforce)  
 <h2>1392. Longest Happy Prefix</h2><h3>Hard</h3><hr><div><p>A string is called a <strong>happy prefix</strong> if is a <strong>non-empty</strong> prefix which is also a suffix (excluding itself).</p>
 
 <p>Given a string <code>s</code>, return <em>the <strong>longest happy prefix</strong> of</em> <code>s</code>. Return an empty string <code>""</code> if no such prefix exists.</p>
