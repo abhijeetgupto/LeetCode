@@ -8,7 +8,7 @@ class Solution:
         
         for i in range(len(nums)) :
             idx = bisect.bisect_left(l,nums[i])
-            l.insert(idx, nums[i])
+            bisect.insort(l,nums[i])
             res[i] = idx
             
         res.reverse()
