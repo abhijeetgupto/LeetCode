@@ -1,3 +1,4 @@
+[Discussion Post (created on 10/11/2021 at 14:20)](https://leetcode.com/problems/domino-and-tromino-tiling/discuss/1621234/I-found-this-beautiful-solution-with-hit-and-trial-!)  
 <h2>790. Domino and Tromino Tiling</h2><h3>Medium</h3><hr><div><p>You have two types of tiles: a <code>2 x 1</code> domino shape and a tromino shape. You may rotate these shapes.</p>
 <img alt="" src="https://assets.leetcode.com/uploads/2021/07/15/lc-domino.jpg" style="width: 362px; height: 195px;">
 <p>Given an integer n, return <em>the number of ways to tile an</em> <code>2 x n</code> <em>board</em>. Since the answer may be very large, return it <strong>modulo</strong> <code>10<sup>9</sup> + 7</code>.</p>
