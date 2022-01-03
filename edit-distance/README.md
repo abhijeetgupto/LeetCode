@@ -1,3 +1,4 @@
+[Discussion Post (created on 3/0/2022 at 15:52)](https://leetcode.com/problems/edit-distance/discuss/1664099/Python-recursion-and-memoization)  
 <h2>72. Edit Distance</h2><h3>Hard</h3><hr><div><p>Given two strings <code>word1</code> and <code>word2</code>, return <em>the minimum number of operations required to convert <code>word1</code> to <code>word2</code></em>.</p>
 
 <p>You have the following three operations permitted on a word:</p>
