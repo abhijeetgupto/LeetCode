@@ -1,3 +1,4 @@
+[Discussion Post (created on 27/0/2022 at 14:50)](https://leetcode.com/problems/minimum-falling-path-sum/discuss/1723460/Python-3-or-Recursive-and-Iterative-Solutions)  
 <h2>931. Minimum Falling Path Sum</h2><h3>Medium</h3><hr><div><p>Given an <code>n x n</code> array of integers <code>matrix</code>, return <em>the <strong>minimum sum</strong> of any <strong>falling path</strong> through</em> <code>matrix</code>.</p>
 
 <p>A <strong>falling path</strong> starts at any element in the first row and chooses the element in the next row that is either directly below or diagonally left/right. Specifically, the next element from position <code>(row, col)</code> will be <code>(row + 1, col - 1)</code>, <code>(row + 1, col)</code>, or <code>(row + 1, col + 1)</code>.</p>
