@@ -2,15 +2,17 @@ class NumMatrix:
 
     def __init__(self, matrix: List[List[int]]):
         
-        dp = [[0 for _ in range(len(matrix[0]))] for _ in range(len(matrix))]
+        n = len(matrix)
+        m = len(matrix[0])
+        dp = [[0]*m for _ in range(n)]
         curr = 0
-        for i in range(len(matrix[0])):
+        for i in range(m):
             curr += matrix[0][i]
             dp[0][i] = curr
 
-        for i in range(1, len(matrix)):
+        for i in range(1, n):
             curr = 0
-            for j in range(len(matrix[0])):
+            for j in range(m):
                 curr += matrix[i][j]
                 dp[i][j] = dp[i - 1][j] + curr
                 
