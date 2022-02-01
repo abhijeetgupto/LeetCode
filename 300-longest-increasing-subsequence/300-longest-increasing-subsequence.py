@@ -1,19 +1,30 @@
 class Solution:
+    
+    def lengthOfLIS(self, nums : List[int]) -> int:
+              
+        def rec(i,memo) :
+            
+            if i in memo:
+                return memo[i]
 
-    def lengthOfLIS(self, nums: List[int]) -> int:
-
+            else:
+                m = 0
+                for j in range(i+1,len(nums)) :
+                    if nums[j] > nums[i] :
+                        m = max(m, rec(j,memo))
+                memo[i] = m+1
+                return memo[i]
+                        
+        m = 0
         n = len(nums)
-        dp = [0]*n
-        dp[0] = 1
         
-        for i in range(1, n) :
-            res = 0
-            for j in range(i-1,-1,-1) :
-                if nums[j] < nums[i] :
-                    res = max(res, dp[j])
-            dp[i] = res + 1
-        
-        return max(dp)
+        memo = {}
+        for i in range(n):
+            if m >= n-i:
+                break
+            m = max(m,rec(i,memo))
+            
+        return m
             
             
           
