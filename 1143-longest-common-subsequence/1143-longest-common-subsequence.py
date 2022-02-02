@@ -18,7 +18,10 @@ class Solution:
                     memo[(i,j)] = 1 + rec(i+1,j+1)
                 
                 else:
-                    memo[(i,j)] = max(rec(i+1,j), rec(i,j+1))
+                    memo[(i+1,j)] = rec(i+1,j)
+                    memo[(i,j+1)] = rec(i,j+1)
+                    memo[(i,j)] = max(memo[(i+1,j)],  memo[(i,j+1)])
+                    
             return memo[(i,j)]
         
         return rec()
