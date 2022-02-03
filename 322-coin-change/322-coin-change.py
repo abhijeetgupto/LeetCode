@@ -1,19 +1,19 @@
 class Solution:
-    def coinChange(self, coins: List[int], amount: int) -> int:
+    def coinChange(self, coins: List[int], amount: int) -> int:        
         
-#         #iterative
+        #iterative
         
-#         dp = [0]*(amount+1)
-#         for i in range(1, len(dp)) :
-#             m = math.inf
-#             for amt in coins :
-#                 if i-amt >= 0 and dp[i-amt] >= 0 :
-#                     m = min(m,dp[i-amt])
-#             if m != math.inf : 
-#                 dp[i] = 1+m
-#             else:
-#                 dp[i] = -1
-#         return dp[-1]
+        dp = [0]*(amount+1)
+        for i in range(1, len(dp)) :
+            m = math.inf
+            for amt in coins :
+                if i-amt >= 0 and dp[i-amt] >= 0 :
+                    m = min(m,dp[i-amt])
+            if m != math.inf : 
+                dp[i] = 1+m
+            else:
+                dp[i] = -1
+        return dp[-1]
         
         
         #recursive
