@@ -3,25 +3,19 @@ from sortedcontainers import SortedList
 class Solution:
     def find132pattern(self, nums: List[int]) -> bool:
         
-        prev = nums[0]
-        temp = SortedList(nums)
-        temp.remove(nums[0])
+        left_smallest = nums[0]
+        right = SortedList(nums[1:])
         
-        for i in range(1,len(nums)):
-            
-            if nums[i] > prev :
-                idx1 = bisect.bisect_left(temp, nums[i])
-                idx2 = bisect.bisect_right(temp, prev)
-                if idx2<idx1 :
-                    return True
+        for i in range(1, len(nums)-1):
+            if nums[i] > left_smallest :
+                idx1 = bisect.bisect_left(right, nums[i])
+                idx2 = bisect.bisect_right(right, left_smallest)
+                if idx1>idx2:return True
                 
             else:
-                prev = nums[i]
-                
-            temp.remove(nums[i])
-                
+                left_smallest = nums[i]
+            right.remove(nums[i])
         return False
-                
                 
             
         
