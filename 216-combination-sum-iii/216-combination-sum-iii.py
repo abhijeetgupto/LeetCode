@@ -4,34 +4,18 @@ class Solution:
         nums = list(range(1,10))
         res = []
         
-        def rec(i=0, target=n, curr=[]):
-
-            if target == 0 and len(curr) == k:
-                res.append(curr)
-                return
-
-            if target < 0 or len(curr) > k or i >= 9:
-                return
-
-            else:
-                rec(i + 1, target - nums[i], curr + [nums[i]])
-                rec(i + 1, target, curr)
+        def rec(i=0, curr = []):
+            
+            if len(curr) == k and sum(curr) == n :
+                res.append(curr.copy())
                 return 
+            
+            if i>=9 or len(curr)>k:
+                return 
+                        
+            rec(i+1, curr + [nums[i]])
+            rec(i+1, curr)
+            return 
         
         rec()
         return res
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        rec()
-        return res
-                
-                
-        
