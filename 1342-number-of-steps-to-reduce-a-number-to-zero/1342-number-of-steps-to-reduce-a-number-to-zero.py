@@ -1,14 +1,5 @@
 class Solution:
     def numberOfSteps(self, num: int) -> int:
         
-        count = 0
-        while num>0:
-            count+=1
-            if num%2==0:
-                num = num//2
-                
-            else:
-                num-=1
-               
-                
-        return count
+        s = bin(num)[2:]
+        return s.count('1')*2 - 1 + s.count('0') 
