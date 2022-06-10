@@ -3,25 +3,34 @@ class Solution:
         """
         Do not return anything, modify board in-place instead.
         """
-        new = copy.deepcopy(board)
         rows = len(board)
         cols = len(board[0])
         
+        for r in range(len(board)):
+            for c in range(len(board[0])):
+                v = [(-1,-1),(-1,0),(-1,1),(0,-1),(0,1),(1,-1),(1,0),(1,1)]
+                count = 0
+                for i,j in v:
+                    if (r+i) in range(rows) and (c+j) in range(cols):
+                        if board[(r+i)][(c+j)] == 1 or board[(r+i)][(c+j)] == 2:
+                            count += 1
+                
+                if board[r][c] == 1:
+                    if 2 <= count <= 3:
+                        board[r][c] = 1
+                    else:
+                        board[r][c] = 2
+                else:
+                    if count == 3:
+                        board[r][c] = 3
+              
         for i in range(rows):
             for j in range(cols):
-                temp = [(i+1, j+1), (i-1,j-1), (i+1, j-1), (i-1, j+1), (i+1, j),(i-1,j), (i, j+1), (i, j-1)]
-                count = 0
-                for r,c in temp :
-                    if r>=0 and r<rows and c>=0 and c<cols and board[r][c] == 1 :
-                        count += 1
-                
-                if board[i][j] == 0 :
-                    if count == 3 :
-                        new[i][j] = 1
-                
-                else:
-                    if count < 2 or count>3:
-                        new[i][j] = 0
-        board[:] = new
+                if board[i][j] == 2:
+                    board[i][j] = 0
+                    
+                elif board[i][j] == 3:
+                    board[i][j] = 1
+        
                         
-                      
+                    
