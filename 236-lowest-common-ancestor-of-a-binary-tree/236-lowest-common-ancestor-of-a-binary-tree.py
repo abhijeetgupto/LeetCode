@@ -8,12 +8,12 @@
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         
-        def rec(node) :
+        def rec(node):
             
             if not node:
                 return None
             
-            if node == p or node == q :
+            if node.val == p.val or node.val == q.val:
                 return node
             
             left = rec(node.left)
@@ -22,17 +22,18 @@ class Solution:
             if left and right:
                 return node
             
-            if not left and not right:
-                return None
-            
             if left:
                 return left
+            
             if right:
                 return right
             
+        
         return rec(root)
-
             
- 
             
+            
+            
+                
+        
         
