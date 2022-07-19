@@ -1,16 +1,20 @@
 class Solution:
     def makeConnected(self, n: int, connections: List[List[int]]) -> int:
         
-        def dfs(node):
-            
-            if node not in dic:
-                visited[node] = True
-                return 
+        def bfs(node):
             
             visited[node] = True
-            for nbr in dic[node]:
-                if not visited[nbr]:
-                    dfs(nbr)
+            queue = deque([node])
+            
+            while queue:
+                
+                node = queue.popleft()
+                if node in dic:
+                    for v in dic[node]:
+                        if not visited[v] :
+                            visited[v] = True
+                            queue.append(v)
+
             
         if len(connections) < n-1:
             return -1
@@ -30,12 +34,6 @@ class Solution:
         for i in range(n):
             if not visited[i]:
                 count += 1
-                dfs(i)
+                bfs(i)
 
         return count-1
-        
-        
-        
-                
-        
-        
