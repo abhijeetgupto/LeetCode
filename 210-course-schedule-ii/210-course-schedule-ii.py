@@ -1,35 +1,20 @@
 class Solution:
     def findOrder(self, n: int, p: List[List[int]]) -> List[int]:
-        
-        
-        def cycle(node):
-           
-            visited[node] = True
-            curr[node] = True
-            
-            if node in dic:
-                for nbr in dic[node]:
-                    if not visited[nbr]:
-                        if cycle(nbr):
-                            curr[node] = False
-                            return True
-                    elif curr[nbr]:
-                        curr[node] = False
-                        return True
-                    
-            curr[node] = False
-            return False
-            
 
         def dfs(node):
-            
             visited[node] = True
+            curr[node] = True
             if node in dic:
                 for nbr in dic[node]:
                     if not visited[nbr]:
-                        dfs(nbr)
+                        if dfs(nbr):
+                            return True
+                    elif curr[nbr]:
+                        return True
+                        
+            curr[node] = False
             res.appendleft(node)
-            return 
+            return False
         
         dic = {}
         for i,j in p:
@@ -38,19 +23,13 @@ class Solution:
             dic[j].append(i)
             
 
-        visited = [False]*n
-        curr = [False]*n
-        
-        for i in range(n):
-            if not visited[i] and cycle(i):
-                return 
-            # print(visited, curr)
-            
-        
+        curr = [False]*n  
         visited = [False]*n
         res = deque()
+        
         for i in range(n):
             if not visited[i]:
-                dfs(i)
+                if dfs(i):
+                    return 
         
         return res
