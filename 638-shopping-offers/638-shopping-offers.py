@@ -10,28 +10,17 @@ class Solution:
             if sum(needs) == 0:
                 return 0
             
-            flag = False
-            for i in range(n):
-                if needs[i] < mini[i]:
-                    flag = True
-                    break
-            
             count = 0
             for i in range(n):
                 count += needs[i]*price[i]
             
-            if flag:
+            if any(needs[i] < mini[i] for i in range(n)):
                 return count
             
             res = count
 
             for offer in special:
-                flag = True
-                for i in range(len(needs)):
-                    if needs[i] < offer[i]:
-                        flag = False
-                        break
-                if flag:
+                if all(needs[i] >= offer[i] for i in range(n)):
                     temp = [needs[i] - offer[i] for i in range(len(needs))]
                     res = min(res, offer[-1] + rec(temp))
             
