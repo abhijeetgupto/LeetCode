@@ -13,10 +13,18 @@ class Solution:
             if s1 == s2:
                 return True
             else:
-                parent[s1] = s2
+                if rank[s1] < rank[s2]:
+                    parent[s1] = s2
+                    rank[s2] += rank[s1]
+                else:
+                    parent[s2] = s1
+                    rank[s1] += rank[s2]
                 return False
+                    
         
         parent = [-1]*len(edges)
+        rank = [1]*len(edges)
+        
         for i,j in edges:
             if unite(i-1, j-1):
                 return [i,j]
